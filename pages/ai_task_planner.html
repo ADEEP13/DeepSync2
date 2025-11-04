@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Task Planner - DeepSync | Intelligent Work Session Organizer</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <meta name="description" content="Transform work chaos into organized, achievable sessions with DeepSync's AI-powered task planner. Profession-specific templates and intelligent scheduling.">
+  
+  <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdeepsync6941back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.9"></script>
+  <script type="module" src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  </head>
+<body class="bg-background min-h-screen">
+    <!-- Navigation Header -->
+    <nav class="bg-surface border-b border-border-light sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg class="h-8 w-8 text-primary" viewBox="0 0 32 32" fill="currentColor">
+                            <circle cx="16" cy="8" r="3" opacity="0.8"/>
+                            <circle cx="16" cy="16" r="4" opacity="0.9"/>
+                            <circle cx="16" cy="24" r="3" opacity="0.7"/>
+                            <path d="M13 16h6M16 13v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-primary">DeepSync</h1>
+                        <p class="text-xs text-text-secondary">AI Task Planner</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="ai_task_planner.html" class="text-primary bg-primary-50 px-3 py-2 rounded-md text-sm font-medium">AI Planner</a>
+                        <a href="leaderboard.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Leaderboard</a>
+                        <a href="profile.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Profile</a>
+                        <a href="support.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Support</a>
+                    </div>
+                </div>
+
+                <!-- User Profile & Actions -->
+                <div class="flex items-center space-x-4">
+                    <!-- Quick Focus Button -->
+                    <button class="btn-primary text-sm px-4 py-2" onclick="startQuickFocus()">
+                        <svg class="w-4 h-4 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        Quick Focus
+                    </button>
+                    
+                    <!-- User Avatar -->
+                    <div class="relative">
+                        <img class="h-8 w-8 rounded-full border-2 border-primary-200" src="https://images.unsplash.com/photo-1578401058525-35aaec0b4658" alt="User profile avatar" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="absolute -top-1 -right-1 h-3 w-3 bg-success rounded-full border-2 border-white"></div>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary p-2" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-surface border-t border-border-light">
+                <a href="ai_task_planner.html" class="text-primary bg-primary-50 block px-3 py-2 rounded-md text-base font-medium">AI Planner</a>
+                <a href="leaderboard.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Leaderboard</a>
+                <a href="profile.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Profile</a>
+                <a href="support.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Support</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+        <!-- Hero Section with AI Insights -->
+        <section class="bg-gradient-to-br from-primary-50 to-secondary-50 py-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <!-- Welcome & AI Recommendations -->
+                    <div class="lg:col-span-2">
+                        <div class="bg-surface rounded-xl shadow-card p-6 border border-border-light">
+                            <div class="flex items-center justify-between mb-4">
+                                <div>
+                                    <h2 class="text-2xl font-bold text-text-primary">Good afternoon, Alex!</h2>
+                                    <p class="text-text-secondary">Your AI assistant has analyzed your patterns and prepared today's optimal schedule.</p>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="h-2 w-2 bg-success rounded-full animate-pulse"></div>
+                                    <span class="text-sm text-success font-medium">AI Active</span>
+                                </div>
+                            </div>
+
+                            <!-- AI Recommendations -->
+                            <div class="bg-accent-50 rounded-lg p-4 mb-4">
+                                <div class="flex items-start space-x-3">
+                                    <div class="flex-shrink-0">
+                                        <svg class="h-6 w-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-sm font-semibold text-accent-800 mb-1">AI Insight</h4>
+                                        <p class="text-sm text-accent-700">Your peak focus time is 2:00-4:00 PM. I've scheduled your most challenging task during this window for optimal productivity.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Quick Stats -->
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-success">87%</div>
+                                    <div class="text-xs text-text-secondary">Task Completion</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-primary">4.2h</div>
+                                    <div class="text-xs text-text-secondary">Focus Time Today</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-accent">12</div>
+                                    <div class="text-xs text-text-secondary">Tasks Planned</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Today's Focus Sessions -->
+                    <div class="space-y-4">
+                        <div class="bg-surface rounded-xl shadow-card p-6 border border-border-light">
+                            <h3 class="text-lg font-semibold text-text-primary mb-4">Today's Sessions</h3>
+                            
+                            <!-- Active Session -->
+                            <div class="bg-success-50 border border-success-200 rounded-lg p-4 mb-3">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-sm font-medium text-success-800">Active Session</span>
+                                    <div class="flex items-center space-x-1">
+                                        <div class="h-2 w-2 bg-success rounded-full animate-pulse"></div>
+                                        <span class="text-xs text-success-700">25:43</span>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-success-700 font-medium">API Documentation Review</p>
+                                <div class="mt-2 bg-success-200 rounded-full h-2">
+                                    <div class="bg-success h-2 rounded-full" style="width: 68%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Upcoming Sessions -->
+                            <div class="space-y-2">
+                                <div class="flex items-center justify-between py-2 border-b border-border-light">
+                                    <div>
+                                        <p class="text-sm font-medium text-text-primary">Code Review</p>
+                                        <p class="text-xs text-text-secondary">3:00 PM - 4:00 PM</p>
+                                    </div>
+                                    <div class="text-xs text-accent font-medium">High Priority</div>
+                                </div>
+                                <div class="flex items-center justify-between py-2">
+                                    <div>
+                                        <p class="text-sm font-medium text-text-primary">Team Standup</p>
+                                        <p class="text-xs text-text-secondary">4:30 PM - 5:00 PM</p>
+                                    </div>
+                                    <div class="text-xs text-primary font-medium">Meeting</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Planning Interface -->
+        <section class="py-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                    <!-- Task Creation & Templates -->
+                    <div class="lg:col-span-1 space-y-6">
+                        <!-- Quick Task Creation -->
+                        <div class="bg-surface rounded-xl shadow-card p-6 border border-border-light">
+                            <h3 class="text-lg font-semibold text-text-primary mb-4">Create Task</h3>
+                            
+                            <form id="task-form" class="space-y-4">
+                                <div>
+                                    <input type="text" id="task-title" placeholder="What needs to be done?" class="input-field text-sm" value="">
+                                </div>
+                                
+                                <div class="grid grid-cols-2 gap-2">
+                                    <select id="task-category" class="input-field text-sm">
+                                        <option value="">Category</option>
+                                        <option value="development">Development</option>
+                                        <option value="design">Design</option>
+                                        <option value="meeting">Meeting</option>
+                                        <option value="research">Research</option>
+                                        <option value="admin">Admin</option>
+                                    </select>
+                                    <select id="task-priority" class="input-field text-sm">
+                                        <option value="medium">Medium</option>
+                                        <option value="high">High</option>
+                                        <option value="low">Low</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs text-text-secondary mb-1">Estimated Duration</label>
+                                    <div class="grid grid-cols-3 gap-1">
+                                        <button type="button" class="text-xs py-2 px-3 border border-border rounded hover:bg-primary-50 hover:border-primary transition-colors" onclick="setDuration(25)">25m</button>
+                                        <button type="button" class="text-xs py-2 px-3 border border-border rounded hover:bg-primary-50 hover:border-primary transition-colors" onclick="setDuration(50)">50m</button>
+                                        <button type="button" class="text-xs py-2 px-3 border border-border rounded hover:bg-primary-50 hover:border-primary transition-colors" onclick="setDuration(90)">90m</button>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="w-full btn-primary text-sm py-2">
+                                    <svg class="w-4 h-4 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                                    </svg>
+                                    Add Task
+                                </button>
+                            </form>
+
+                            <!-- Voice Input -->
+                            <div class="mt-4 pt-4 border-t border-border-light">
+                                <button class="w-full flex items-center justify-center py-2 px-4 border border-border rounded-lg text-sm text-text-secondary hover:bg-background transition-colors" onclick="startVoiceInput()">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+                                    </svg>
+                                    Voice Input
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Profession Templates -->
+                        <div class="bg-surface rounded-xl shadow-card p-6 border border-border-light">
+                            <h3 class="text-lg font-semibold text-text-primary mb-4">Developer Templates</h3>
+                            
+                            <div class="space-y-3">
+                                <button class="w-full text-left p-3 border border-border rounded-lg hover:bg-primary-50 hover:border-primary transition-colors" onclick="applyTemplate('code-review')">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="h-8 w-8 bg-primary-100 rounded-lg flex items-center justify-center">
+                                            <svg class="h-4 w-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-medium text-text-primary">Code Review Session</p>
+                                            <p class="text-xs text-text-secondary">90min focused review</p>
+                                        </div>
+                                    </div>
+                                </button>
+
+                                <button class="w-full text-left p-3 border border-border rounded-lg hover:bg-primary-50 hover:border-primary transition-colors" onclick="applyTemplate('feature-dev')">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="h-8 w-8 bg-success-100 rounded-lg flex items-center justify-center">
+                                            <svg class="h-4 w-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-medium text-text-primary">Feature Development</p>
+                                            <p class="text-xs text-text-secondary">2-3 hour deep work</p>
+                                        </div>
+                                    </div>
+                                </button>
+
+                                <button class="w-full text-left p-3 border border-border rounded-lg hover:bg-primary-50 hover:border-primary transition-colors" onclick="applyTemplate('bug-fix')">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="h-8 w-8 bg-error-100 rounded-lg flex items-center justify-center">
+                                            <svg class="h-4 w-4 text-error" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-medium text-text-primary">Bug Investigation</p>
+                                            <p class="text-xs text-text-secondary">45min focused debug</p>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Time Blocking Calendar -->
+                    <div class="lg:col-span-2">
+                        <div class="bg-surface rounded-xl shadow-card p-6 border border-border-light">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-lg font-semibold text-text-primary">Today's Schedule</h3>
+                                <div class="flex items-center space-x-2">
+                                    <button class="text-sm text-text-secondary hover:text-primary transition-colors" onclick="previousDay()">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                        </svg>
+                                    </button>
+                                    <span class="text-sm font-medium text-text-primary">Monday, Nov 4, 2025</span>
+                                    <button class="text-sm text-text-secondary hover:text-primary transition-colors" onclick="nextDay()">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Calendar Grid -->
+                            <div class="space-y-1" id="calendar-grid">
+                                <!-- Time slots will be generated by JavaScript -->
+                                <div class="grid grid-cols-12 gap-1 text-xs text-text-secondary mb-2">
+                                    <div class="col-span-2">Time</div>
+                                    <div class="col-span-10">Tasks</div>
+                                </div>
+
+                                <!-- 9:00 AM -->
+                                <div class="grid grid-cols-12 gap-1 min-h-12 border-b border-border-light py-2">
+                                    <div class="col-span-2 text-sm text-text-secondary">9:00 AM</div>
+                                    <div class="col-span-10">
+                                        <div class="bg-primary-100 border border-primary-200 rounded-lg p-2 h-full">
+                                            <p class="text-sm font-medium text-primary-800">Daily Standup</p>
+                                            <p class="text-xs text-primary-600">Team meeting</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 10:00 AM -->
+                                <div class="grid grid-cols-12 gap-1 min-h-12 border-b border-border-light py-2">
+                                    <div class="col-span-2 text-sm text-text-secondary">10:00 AM</div>
+                                    <div class="col-span-10">
+                                        <div class="bg-success-100 border border-success-200 rounded-lg p-2 h-full">
+                                            <p class="text-sm font-medium text-success-800">Feature Development</p>
+                                            <p class="text-xs text-success-600">User authentication module</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 11:00 AM -->
+                                <div class="grid grid-cols-12 gap-1 min-h-12 border-b border-border-light py-2">
+                                    <div class="col-span-2 text-sm text-text-secondary">11:00 AM</div>
+                                    <div class="col-span-10">
+                                        <div class="bg-success-100 border border-success-200 rounded-lg p-2 h-full opacity-75">
+                                            <p class="text-sm font-medium text-success-800">Feature Development (cont.)</p>
+                                            <p class="text-xs text-success-600">Testing & debugging</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 12:00 PM -->
+                                <div class="grid grid-cols-12 gap-1 min-h-12 border-b border-border-light py-2">
+                                    <div class="col-span-2 text-sm text-text-secondary">12:00 PM</div>
+                                    <div class="col-span-10">
+                                        <div class="bg-accent-100 border border-accent-200 rounded-lg p-2 h-full">
+                                            <p class="text-sm font-medium text-accent-800">Lunch Break</p>
+                                            <p class="text-xs text-accent-600">Mindful eating</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 1:00 PM -->
+                                <div class="grid grid-cols-12 gap-1 min-h-12 border-b border-border-light py-2">
+                                    <div class="col-span-2 text-sm text-text-secondary">1:00 PM</div>
+                                    <div class="col-span-10 dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                        <div class="border-2 border-dashed border-border rounded-lg p-2 h-full flex items-center justify-center text-text-secondary">
+                                            <span class="text-xs">Drop task here</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 2:00 PM - Peak Focus Time -->
+                                <div class="grid grid-cols-12 gap-1 min-h-12 border-b border-border-light py-2 bg-accent-50">
+                                    <div class="col-span-2 text-sm text-accent-700 font-medium">2:00 PM</div>
+                                    <div class="col-span-10">
+                                        <div class="bg-error-100 border border-error-200 rounded-lg p-2 h-full">
+                                            <div class="flex items-center justify-between">
+                                                <div>
+                                                    <p class="text-sm font-medium text-error-800">Code Review</p>
+                                                    <p class="text-xs text-error-600">High priority - Peak focus time</p>
+                                                </div>
+                                                <div class="text-xs text-accent-700 font-medium">🧠 Peak</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 3:00 PM -->
+                                <div class="grid grid-cols-12 gap-1 min-h-12 border-b border-border-light py-2 bg-accent-50">
+                                    <div class="col-span-2 text-sm text-accent-700 font-medium">3:00 PM</div>
+                                    <div class="col-span-10">
+                                        <div class="bg-error-100 border border-error-200 rounded-lg p-2 h-full opacity-75">
+                                            <p class="text-sm font-medium text-error-800">Code Review (cont.)</p>
+                                            <p class="text-xs text-error-600">Documentation updates</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 4:00 PM -->
+                                <div class="grid grid-cols-12 gap-1 min-h-12 border-b border-border-light py-2">
+                                    <div class="col-span-2 text-sm text-text-secondary">4:00 PM</div>
+                                    <div class="col-span-10 dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                        <div class="border-2 border-dashed border-border rounded-lg p-2 h-full flex items-center justify-center text-text-secondary">
+                                            <span class="text-xs">Drop task here</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 5:00 PM -->
+                                <div class="grid grid-cols-12 gap-1 min-h-12 border-b border-border-light py-2">
+                                    <div class="col-span-2 text-sm text-text-secondary">5:00 PM</div>
+                                    <div class="col-span-10">
+                                        <div class="bg-primary-100 border border-primary-200 rounded-lg p-2 h-full">
+                                            <p class="text-sm font-medium text-primary-800">Team Sync</p>
+                                            <p class="text-xs text-primary-600">Weekly progress review</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task Queue & Insights -->
+                    <div class="lg:col-span-1 space-y-6">
+                        <!-- Unscheduled Tasks -->
+                        <div class="bg-surface rounded-xl shadow-card p-6 border border-border-light">
+                            <h3 class="text-lg font-semibold text-text-primary mb-4">Task Queue</h3>
+                            
+                            <div class="space-y-3" id="task-queue">
+                                <div class="task-item p-3 border border-border rounded-lg cursor-move hover:shadow-subtle transition-all" draggable="true" ondragstart="drag(event)" data-task-id="1">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="text-sm font-medium text-text-primary">API Documentation</span>
+                                        <span class="text-xs text-accent font-medium">High</span>
+                                    </div>
+                                    <p class="text-xs text-text-secondary mb-2">Update REST API docs</p>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-xs text-text-secondary">45min</span>
+                                        <div class="flex space-x-1">
+                                            <div class="h-2 w-2 bg-primary rounded-full"></div>
+                                            <div class="h-2 w-2 bg-border rounded-full"></div>
+                                            <div class="h-2 w-2 bg-border rounded-full"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="task-item p-3 border border-border rounded-lg cursor-move hover:shadow-subtle transition-all" draggable="true" ondragstart="drag(event)" data-task-id="2">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="text-sm font-medium text-text-primary">Bug Fix #247</span>
+                                        <span class="text-xs text-error font-medium">Urgent</span>
+                                    </div>
+                                    <p class="text-xs text-text-secondary mb-2">Login validation issue</p>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-xs text-text-secondary">30min</span>
+                                        <div class="flex space-x-1">
+                                            <div class="h-2 w-2 bg-error rounded-full"></div>
+                                            <div class="h-2 w-2 bg-error rounded-full"></div>
+                                            <div class="h-2 w-2 bg-border rounded-full"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="task-item p-3 border border-border rounded-lg cursor-move hover:shadow-subtle transition-all" draggable="true" ondragstart="drag(event)" data-task-id="3">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="text-sm font-medium text-text-primary">Unit Tests</span>
+                                        <span class="text-xs text-primary font-medium">Medium</span>
+                                    </div>
+                                    <p class="text-xs text-text-secondary mb-2">Write tests for auth module</p>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-xs text-text-secondary">90min</span>
+                                        <div class="flex space-x-1">
+                                            <div class="h-2 w-2 bg-success rounded-full"></div>
+                                            <div class="h-2 w-2 bg-success rounded-full"></div>
+                                            <div class="h-2 w-2 bg-success rounded-full"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Productivity Insights -->
+                        <div class="bg-surface rounded-xl shadow-card p-6 border border-border-light">
+                            <h3 class="text-lg font-semibold text-text-primary mb-4">Insights</h3>
+                            
+                            <div class="space-y-4">
+                                <!-- Focus Trend -->
+                                <div>
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-sm text-text-secondary">Focus Trend</span>
+                                        <span class="text-sm font-medium text-success">+12%</span>
+                                    </div>
+                                    <div class="bg-background rounded-full h-2">
+                                        <div class="bg-success h-2 rounded-full" style="width: 78%"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Task Completion -->
+                                <div>
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-sm text-text-secondary">Completion Rate</span>
+                                        <span class="text-sm font-medium text-primary">87%</span>
+                                    </div>
+                                    <div class="bg-background rounded-full h-2">
+                                        <div class="bg-primary h-2 rounded-full" style="width: 87%"></div>
+                                    </div>
+                                </div>
+
+                                <!-- AI Recommendation -->
+                                <div class="bg-accent-50 rounded-lg p-3 mt-4">
+                                    <div class="flex items-start space-x-2">
+                                        <svg class="h-4 w-4 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                        <div>
+                                            <p class="text-xs font-medium text-accent-800">AI Tip</p>
+                                            <p class="text-xs text-accent-700">Schedule breaks between complex tasks to maintain peak performance.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Collaboration Section -->
+        <section class="py-8 bg-background">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-surface rounded-xl shadow-card p-6 border border-border-light">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-xl font-semibold text-text-primary">Team Collaboration</h3>
+                        <button class="btn-outline text-sm px-4 py-2">
+                            <svg class="w-4 h-4 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                            </svg>
+                            Invite Team
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Shared Task Lists -->
+                        <div class="space-y-4">
+                            <h4 class="text-lg font-medium text-text-primary">Shared Lists</h4>
+                            
+                            <div class="space-y-3">
+                                <div class="border border-border rounded-lg p-4">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <h5 class="text-sm font-medium text-text-primary">Frontend Sprint</h5>
+                                        <span class="text-xs text-success">8/12 tasks</span>
+                                    </div>
+                                    <div class="flex -space-x-2 mb-2">
+                                        <img class="h-6 w-6 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1487161988573-8471a0c9da34" alt="Team member Alex Chen" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                                        <img class="h-6 w-6 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1616587895596-11641131b78b" alt="Team member Sarah Martinez" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                                        <img class="h-6 w-6 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1627599951020-9e7b70c44f1b" alt="Team member David Kim" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                                    </div>
+                                    <div class="bg-success-200 rounded-full h-2">
+                                        <div class="bg-success h-2 rounded-full" style="width: 67%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="border border-border rounded-lg p-4">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <h5 class="text-sm font-medium text-text-primary">API Integration</h5>
+                                        <span class="text-xs text-accent">3/7 tasks</span>
+                                    </div>
+                                    <div class="flex -space-x-2 mb-2">
+                                        <img class="h-6 w-6 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1720320704929-ebabb3a3fc6b" alt="Team member Alex Chen" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                                        <img class="h-6 w-6 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1601513043334-36a0088140d4"h-6 w-6 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Team member Mike Johnson" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                                    </div>
+                                    <div class="bg-accent-200 rounded-full h-2">
+                                        <div class="bg-accent h-2 rounded-full" style="width: 43%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Productivity Insights -->
+                        <div class="space-y-4">
+                            <h4 class="text-lg font-medium text-text-primary">Team Insights</h4>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-success-50 rounded-lg p-4">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-sm font-medium text-success-800">Team Focus Time</span>
+                                        <span class="text-lg font-bold text-success-600">24.5h</span>
+                                    </div>
+                                    <p class="text-xs text-success-700">This week vs 22.1h last week</p>
+                                    <div class="mt-2 bg-success-200 rounded-full h-2">
+                                        <div class="bg-success h-2 rounded-full" style="width: 85%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-primary-50 rounded-lg p-4">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-sm font-medium text-primary-800">Collaboration Score</span>
+                                        <span class="text-lg font-bold text-primary-600">92%</span>
+                                    </div>
+                                    <p class="text-xs text-primary-700">Based on shared task completion</p>
+                                    <div class="mt-2 bg-primary-200 rounded-full h-2">
+                                        <div class="bg-primary h-2 rounded-full" style="width: 92%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Integration Tools -->
+                        <div class="space-y-4">
+                            <h4 class="text-lg font-medium text-text-primary">Integrations</h4>
+                            
+                            <div class="grid grid-cols-2 gap-3">
+                                <button class="flex items-center justify-center p-3 border border-border rounded-lg hover:bg-background transition-colors">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="h-6 w-6 bg-blue-500 rounded flex items-center justify-center">
+                                            <span class="text-white text-xs font-bold">J</span>
+                                        </div>
+                                        <span class="text-sm text-text-primary">Jira</span>
+                                    </div>
+                                </button>
+
+                                <button class="flex items-center justify-center p-3 border border-border rounded-lg hover:bg-background transition-colors">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="h-6 w-6 bg-purple-500 rounded flex items-center justify-center">
+                                            <span class="text-white text-xs font-bold">S</span>
+                                        </div>
+                                        <span class="text-sm text-text-primary">Slack</span>
+                                    </div>
+                                </button>
+
+                                <button class="flex items-center justify-center p-3 border border-border rounded-lg hover:bg-background transition-colors">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="h-6 w-6 bg-green-500 rounded flex items-center justify-center">
+                                            <span class="text-white text-xs font-bold">T</span>
+                                        </div>
+                                        <span class="text-sm text-text-primary">Trello</span>
+                                    </div>
+                                </button>
+
+                                <button class="flex items-center justify-center p-3 border border-border rounded-lg hover:bg-background transition-colors">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="h-6 w-6 bg-red-500 rounded flex items-center justify-center">
+                                            <span class="text-white text-xs font-bold">G</span>
+                                        </div>
+                                        <span class="text-sm text-text-primary">GitHub</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-border-light py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center">
+                        <svg class="h-6 w-6 text-primary" viewBox="0 0 32 32" fill="currentColor">
+                            <circle cx="16" cy="8" r="3" opacity="0.8"/>
+                            <circle cx="16" cy="16" r="4" opacity="0.9"/>
+                            <circle cx="16" cy="24" r="3" opacity="0.7"/>
+                            <path d="M13 16h6M16 13v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <span class="ml-2 text-lg font-bold text-primary">DeepSync</span>
+                    </div>
+                    <span class="text-sm text-text-secondary">Sync your technology with your true priorities</span>
+                </div>
+                
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-sm text-text-secondary hover:text-primary transition-colors">Privacy</a>
+                    <a href="#" class="text-sm text-text-secondary hover:text-primary transition-colors">Terms</a>
+                    <a href="support.html" class="text-sm text-text-secondary hover:text-primary transition-colors">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Task form submission
+        document.getElementById('task-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const title = document.getElementById('task-title').value;
+            const category = document.getElementById('task-category').value;
+            const priority = document.getElementById('task-priority').value;
+            
+            if (title.trim()) {
+                addTaskToQueue(title, category, priority);
+                this.reset();
+            }
+        });
+
+        // Add task to queue
+        function addTaskToQueue(title, category, priority) {
+            const queue = document.getElementById('task-queue');
+            const taskId = Date.now();
+            
+            const priorityColors = {
+                'high': 'error',
+                'medium': 'primary',
+                'low': 'success'
+            };
+            
+            const color = priorityColors[priority] || 'primary';
+            
+            const taskElement = document.createElement('div');
+            taskElement.className = 'task-item p-3 border border-border rounded-lg cursor-move hover:shadow-subtle transition-all';
+            taskElement.draggable = true;
+            taskElement.setAttribute('data-task-id', taskId);
+            taskElement.addEventListener('dragstart', drag);
+            
+            taskElement.innerHTML = `
+                <div class="flex items-center justify-between mb-1">
+                    <span class="text-sm font-medium text-text-primary">${title}</span>
+                    <span class="text-xs text-${color} font-medium">${priority.charAt(0).toUpperCase() + priority.slice(1)}</span>
+                </div>
+                <p class="text-xs text-text-secondary mb-2">${category || 'General'}</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-xs text-text-secondary">30min</span>
+                    <div class="flex space-x-1">
+                        <div class="h-2 w-2 bg-${color} rounded-full"></div>
+                        <div class="h-2 w-2 bg-border rounded-full"></div>
+                        <div class="h-2 w-2 bg-border rounded-full"></div>
+                    </div>
+                </div>
+            `;
+            
+            queue.appendChild(taskElement);
+        }
+
+        // Set duration buttons
+        function setDuration(minutes) {
+            // Visual feedback for duration selection
+            const buttons = document.querySelectorAll('button[onclick^="setDuration"]');
+            buttons.forEach(btn => btn.classList.remove('bg-primary-50', 'border-primary', 'text-primary'));
+            
+            event.target.classList.add('bg-primary-50', 'border-primary', 'text-primary');
+        }
+
+        // Apply template
+        function applyTemplate(templateType) {
+            const templates = {
+                'code-review': {
+                    title: 'Code Review Session',
+                    category: 'development',
+                    priority: 'high'
+                },
+                'feature-dev': {
+                    title: 'Feature Development',
+                    category: 'development',
+                    priority: 'medium'
+                },
+                'bug-fix': {
+                    title: 'Bug Investigation',
+                    category: 'development',
+                    priority: 'high'
+                }
+            };
+            
+            const template = templates[templateType];
+            if (template) {
+                document.getElementById('task-title').value = template.title;
+                document.getElementById('task-category').value = template.category;
+                document.getElementById('task-priority').value = template.priority;
+            }
+        }
+
+        // Voice input (placeholder)
+        function startVoiceInput() {
+            alert('Voice input feature coming soon! This will allow you to create tasks using natural language.');
+        }
+
+        // Quick focus session
+        function startQuickFocus() {
+            alert('Starting 25-minute focus session...');
+        }
+
+        // Drag and drop functionality
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.getAttribute('data-task-id'));
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            const taskId = ev.dataTransfer.getData("text");
+            const taskElement = document.querySelector(`[data-task-id="${taskId}"]`);
+            
+            if (taskElement) {
+                // Remove from queue
+                taskElement.remove();
+                
+                // Add to calendar slot
+                const dropZone = ev.currentTarget;
+                const taskTitle = taskElement.querySelector('.text-sm.font-medium').textContent;
+                const taskCategory = taskElement.querySelector('.text-xs.text-text-secondary').textContent;
+                
+                dropZone.innerHTML = `
+                    <div class="bg-success-100 border border-success-200 rounded-lg p-2 h-full">
+                        <p class="text-sm font-medium text-success-800">${taskTitle}</p>
+                        <p class="text-xs text-success-600">${taskCategory}</p>
+                    </div>
+                `;
+                
+                dropZone.classList.remove('dropzone');
+                dropZone.removeAttribute('ondrop');
+                dropZone.removeAttribute('ondragover');
+            }
+        }
+
+        // Calendar navigation
+        function previousDay() {
+            // Placeholder for previous day navigation
+            console.log('Navigate to previous day');
+        }
+
+        function nextDay() {
+            // Placeholder for next day navigation
+            console.log('Navigate to next day');
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add some sample tasks to demonstrate functionality
+            setTimeout(() => {
+                addTaskToQueue('Review pull request #123', 'development', 'high');
+                addTaskToQueue('Update documentation', 'admin', 'medium');
+                addTaskToQueue('Team standup preparation', 'meeting', 'low');
+            }, 500);
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
