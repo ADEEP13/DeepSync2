@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Center - DeepSync | Mindful Productivity Platform</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <meta name="description" content="Get comprehensive support for DeepSync - help documentation, troubleshooting, wellness coaching, and community resources for digital wellness success.">
+  
+  <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdeepsync6941back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.9"></script>
+  <script type="module" src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  </head>
+<body class="bg-background min-h-screen">
+    <!-- Navigation Header -->
+    <nav class="bg-surface border-b border-border-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg class="h-8 w-8 text-primary" viewBox="0 0 32 32" fill="currentColor">
+                            <circle cx="16" cy="8" r="3" opacity="0.8"/>
+                            <circle cx="16" cy="16" r="4" opacity="0.9"/>
+                            <circle cx="16" cy="24" r="3" opacity="0.7"/>
+                            <path d="M13 16h6M16 13v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-primary">DeepSync</h1>
+                        <p class="text-xs text-text-secondary">Mindful Productivity</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="ai_task_planner.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">AI Planner</a>
+                        <a href="leaderboard.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Leaderboard</a>
+                        <a href="profile.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Profile</a>
+                        <a href="support.html" class="text-primary bg-primary-50 px-3 py-2 rounded-md text-sm font-medium">Support</a>
+                    </div>
+                </div>
+
+                <!-- User Profile & Actions -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="h-8 w-8 bg-primary rounded-full flex items-center justify-center">
+                            <span class="text-white text-sm font-medium">AC</span>
+                        </div>
+                        <span class="text-sm text-text-primary">Alex Chen</span>
+                    </div>
+                    <a href="login.html" class="text-text-secondary hover:text-primary text-sm">Sign Out</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary p-2" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-surface border-t border-border-light">
+                <a href="ai_task_planner.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">AI Planner</a>
+                <a href="leaderboard.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Leaderboard</a>
+                <a href="profile.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Profile</a>
+                <a href="support.html" class="text-primary bg-primary-50 block px-3 py-2 rounded-md text-base font-medium">Support</a>
+                <div class="border-t border-border-light pt-2 mt-2">
+                    <div class="flex items-center px-3 py-2">
+                        <div class="h-8 w-8 bg-primary rounded-full flex items-center justify-center">
+                            <span class="text-white text-sm font-medium">AC</span>
+                        </div>
+                        <span class="ml-2 text-sm text-text-primary">Alex Chen</span>
+                    </div>
+                    <a href="login.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Sign Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-primary-50 to-secondary-50 py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <div class="mx-auto h-16 w-16 bg-primary rounded-full flex items-center justify-center mb-6">
+                        <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                    <h1 class="text-4xl font-bold text-text-primary mb-4">Support Center</h1>
+                    <p class="text-xl text-text-secondary max-w-2xl mx-auto mb-8">
+                        Get the help you need to maximize your digital wellness journey. We're here to support your success every step of the way.
+                    </p>
+
+                    <!-- Quick Stats -->
+                    <div class="flex items-center justify-center space-x-8 text-sm text-text-secondary">
+                        <div class="flex items-center">
+                            <svg class="h-5 w-5 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>98% Resolution Rate</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="h-5 w-5 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>< 2 Hour Response</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="h-5 w-5 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                            </svg>
+                            <span>24/7 Community Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="py-12 bg-surface">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold text-text-primary mb-4">How can we help you today?</h2>
+                    <div class="relative max-w-2xl mx-auto">
+                        <input 
+                            type="text" 
+                            id="support-search"
+                            placeholder="Search for help articles, tutorials, or common issues..."
+                            class="w-full pl-12 pr-4 py-4 border border-border rounded-xl bg-background text-text-primary placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent text-lg"
+                            oninput="performSearch(this.value)"
+                        >
+                        <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Search Suggestions -->
+                    <div id="search-suggestions" class="hidden mt-4 max-w-2xl mx-auto">
+                        <div class="bg-surface border border-border rounded-lg shadow-card p-4">
+                            <div class="text-left">
+                                <h4 class="text-sm font-medium text-text-primary mb-2">Popular searches:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <button class="px-3 py-1 bg-primary-50 text-primary text-sm rounded-full hover:bg-primary-100 transition-colors" onclick="searchFor('focus session setup')">Focus session setup</button>
+                                    <button class="px-3 py-1 bg-primary-50 text-primary text-sm rounded-full hover:bg-primary-100 transition-colors" onclick="searchFor('AI task planner')">AI task planner</button>
+                                    <button class="px-3 py-1 bg-primary-50 text-primary text-sm rounded-full hover:bg-primary-100 transition-colors" onclick="searchFor('screen time tracking')">Screen time tracking</button>
+                                    <button class="px-3 py-1 bg-primary-50 text-primary text-sm rounded-full hover:bg-primary-100 transition-colors" onclick="searchFor('leaderboard points')">Leaderboard points</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Categories -->
+        <section class="py-16 bg-background">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-text-primary mb-4">Browse Support Categories</h2>
+                    <p class="text-text-secondary max-w-2xl mx-auto">Find answers organized by topic and user type</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Getting Started -->
+                    <div class="card hover:shadow-card transition-all duration-300 cursor-pointer" onclick="expandCategory('getting-started')">
+                        <div class="flex items-center mb-4">
+                            <div class="h-12 w-12 bg-success-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="h-6 w-6 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-primary">Getting Started</h3>
+                                <p class="text-sm text-text-secondary">Setup guides and first steps</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center text-text-secondary">
+                                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Account setup and profile creation
+                            </div>
+                            <div class="flex items-center text-text-secondary">
+                                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                First focus session walkthrough
+                            </div>
+                            <div class="flex items-center text-text-secondary">
+                                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Understanding your dashboard
+                            </div>
+                        </div>
+                        <div class="mt-4 text-right">
+                            <span class="text-xs text-accent font-medium">12 articles</span>
+                        </div>
+                    </div>
+
+                    <!-- AI Task Planner -->
+                    <div class="card hover:shadow-card transition-all duration-300 cursor-pointer" onclick="expandCategory('ai-planner')">
+                        <div class="flex items-center mb-4">
+                            <div class="h-12 w-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-primary">AI Task Planner</h3>
+                                <p class="text-sm text-text-secondary">Maximize your productivity planning</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center text-text-secondary">
+                                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Creating effective task lists
+                            </div>
+                            <div class="flex items-center text-text-secondary">
+                                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                AI suggestions and optimization
+                            </div>
+                            <div class="flex items-center text-text-secondary">
+                                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Time blocking best practices
+                            </div>
+                        </div>
+                        <div class="mt-4 text-right">
+                            <span class="text-xs text-accent font-medium">18 articles</span>
+                        </div>
+                    </div>
+
+                    <!-- Focus Sessions -->
+                    <div class="card hover:shadow-card transition-all duration-300 cursor-pointer" onclick="expandCategory('focus-sessions')">
+                        <div class="flex items-center mb-4">
+                            <div class="h-12 w-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-primary">Focus Sessions</h3>
+                                <p class="text-sm text-text-secondary">Deep work and distraction blocking</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center text-text-secondary">
+                                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Setting up distraction blocking
+                            </div>
+                            <div class="flex items-center text-text-secondary">
+                                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Optimal session lengths
+                            </div>
+                            <div class="flex items-center text-text-secondary">
+                                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Break strategies and recovery
+                            </div>
+                        </div>
+                        <div class="mt-4 text-right">
+                            <span class="text-xs text-accent font-medium">15 articles</span>
+                        </div>
+                    </div>
+
+                    <!-- Analytics & Insights -->
+                    <div class="card hover:shadow-card transition-all duration-300 cursor-pointer" onclick="expandCategory('analytics')">
+                        <div class="flex items-center mb-4">
+                            <div class="h-12 w-12 bg-secondary-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="h-6 w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-primary">Analytics & Insights</h3>
+                                <p class="text-sm text-text-secondary">Understanding your data</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center text-text-secondary">
+                                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Reading your productivity metrics
+                            </div>
+                            <div class="flex items-center text-text-secondary">
+                                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Screen time classification
+                            </div>
+                            <div class="flex items-center text-text-secondary">
+                                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Setting and tracking goals
+                            </div>
+                        </div>
+                        <div class="mt-4 text-right">
+                            <span class="text-xs text-accent font-medium">22 articles</span>
+                        </div>
+                    </div>
+
+                    <!-- Digital Wellness -->
+                    <div class="card hover:shadow-card transition-all duration-300 cursor-pointer" onclick="expandCategory('wellness')">
+                        <div class="flex items-center mb-4">
+                            <div class="h-12 w-12 bg-success-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="h-6 w-6 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-primary">Digital Wellness</h3>
+                                <p class="text-sm text-text-secondary">Healthy technology habits</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center text-text-secondary">
+                                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Building sustainable habits
+                            </div>
+                            <div class="flex items-center text-text-secondary">
+                                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Overcoming digital addiction
+                            </div>
+                            <div class="flex items-center text-text-secondary">
+                                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Work-life balance strategies
+                            </div>
+                        </div>
+                        <div class="mt-4 text-right">
+                            <span class="text-xs text-accent font-medium">28 articles</span>
+                        </div>
+                    </div>
+
+                    <!-- Technical Support -->
+                    <div class="card hover:shadow-card transition-all duration-300 cursor-pointer" onclick="expandCategory('technical')">
+                        <div class="flex items-center mb-4">
+                            <div class="h-12 w-12 bg-error-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="h-6 w-6 text-error" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-primary">Technical Support</h3>
+                                <p class="text-sm text-text-secondary">Troubleshooting and fixes</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center text-text-secondary">
+                                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Common login issues
+                            </div>
+                            <div class="flex items-center text-text-secondary">
+                                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Data sync problems
+                            </div>
+                            <div class="flex items-center text-text-secondary">
+                                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Browser compatibility
+                            </div>
+                        </div>
+                        <div class="mt-4 text-right">
+                            <span class="text-xs text-accent font-medium">14 articles</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Options -->
+        <section class="py-16 bg-surface">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-text-primary mb-4">Still Need Help?</h2>
+                    <p class="text-text-secondary max-w-2xl mx-auto">Choose the support method that works best for you</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Live Chat -->
+                    <div class="card text-center hover:shadow-card transition-all duration-300">
+                        <div class="h-16 w-16 bg-success-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="h-8 w-8 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-text-primary mb-2">Live Chat</h3>
+                        <p class="text-sm text-text-secondary mb-4">Get instant help from our support team</p>
+                        <div class="text-xs text-success font-medium mb-4">● Online now</div>
+                        <button class="btn-secondary w-full" onclick="startLiveChat()">Start Chat</button>
+                    </div>
+
+                    <!-- Email Support -->
+                    <div class="card text-center hover:shadow-card transition-all duration-300">
+                        <div class="h-16 w-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-text-primary mb-2">Email Support</h3>
+                        <p class="text-sm text-text-secondary mb-4">Detailed help via email</p>
+                        <div class="text-xs text-text-secondary mb-4">Response within 2 hours</div>
+                        <button class="btn-outline w-full" onclick="openEmailForm()">Send Email</button>
+                    </div>
+
+                    <!-- Community Forum -->
+                    <div class="card text-center hover:shadow-card transition-all duration-300">
+                        <div class="h-16 w-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-text-primary mb-2">Community Forum</h3>
+                        <p class="text-sm text-text-secondary mb-4">Connect with other users</p>
+                        <div class="text-xs text-text-secondary mb-4">2,847 active members</div>
+                        <button class="btn-outline w-full" onclick="visitForum()">Join Discussion</button>
+                    </div>
+
+                    <!-- Video Tutorials -->
+                    <div class="card text-center hover:shadow-card transition-all duration-300">
+                        <div class="h-16 w-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="h-8 w-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293H15M9 10v4a2 2 0 002 2h2a2 2 0 002-2v-4M9 10V9a2 2 0 012-2h2a2 2 0 012 2v1"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-text-primary mb-2">Video Tutorials</h3>
+                        <p class="text-sm text-text-secondary mb-4">Step-by-step visual guides</p>
+                        <div class="text-xs text-text-secondary mb-4">45+ tutorial videos</div>
+                        <button class="btn-outline w-full" onclick="watchTutorials()">Watch Videos</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-16 bg-background">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-text-primary mb-4">Frequently Asked Questions</h2>
+                    <p class="text-text-secondary">Quick answers to common questions</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="card">
+                        <button class="w-full text-left flex items-center justify-between py-2" onclick="toggleFAQ('faq-1')">
+                            <h3 class="text-lg font-semibold text-text-primary">How does the AI task planner work?</h3>
+                            <svg id="faq-1-icon" class="h-5 w-5 text-text-secondary transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="faq-1-content" class="hidden mt-4 text-text-secondary">
+                            <p>Our AI task planner analyzes your work patterns, profession-specific requirements, and productivity goals to create optimized daily schedules. It considers factors like your energy levels throughout the day, task complexity, and deadline priorities to suggest the most effective work sessions. The AI learns from your completion rates and adjusts recommendations over time.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="card">
+                        <button class="w-full text-left flex items-center justify-between py-2" onclick="toggleFAQ('faq-2')">
+                            <h3 class="text-lg font-semibold text-text-primary">Is my data private and secure?</h3>
+                            <svg id="faq-2-icon" class="h-5 w-5 text-text-secondary transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="faq-2-content" class="hidden mt-4 text-text-secondary">
+                            <p>Yes, absolutely. We use end-to-end encryption for all data transmission and storage. Your personal productivity data, screen time information, and usage patterns are never shared with third parties. We're GDPR compliant and follow strict data protection protocols. You can export or delete your data at any time from your profile settings.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="card">
+                        <button class="w-full text-left flex items-center justify-between py-2" onclick="toggleFAQ('faq-3')">
+                            <h3 class="text-lg font-semibold text-text-primary">How do focus sessions help with productivity?</h3>
+                            <svg id="faq-3-icon" class="h-5 w-5 text-text-secondary transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="faq-3-content" class="hidden mt-4 text-text-secondary">
+                            <p>Focus sessions create dedicated time blocks where distracting websites and apps are blocked, allowing you to concentrate fully on important tasks. The sessions use scientifically-backed techniques like the Pomodoro method, with customizable work and break intervals. Progress tracking and achievement rewards help maintain motivation and build consistent deep work habits.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="card">
+                        <button class="w-full text-left flex items-center justify-between py-2" onclick="toggleFAQ('faq-4')">
+                            <h3 class="text-lg font-semibold text-text-primary">Can I use DeepSync on multiple devices?</h3>
+                            <svg id="faq-4-icon" class="h-5 w-5 text-text-secondary transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="faq-4-content" class="hidden mt-4 text-text-secondary">
+                            <p>Yes, DeepSync syncs seamlessly across all your devices. Your tasks, progress, and settings are automatically synchronized between desktop, tablet, and mobile. Focus sessions can be started on one device and continued on another. The progressive web app works offline, syncing data when you reconnect to the internet.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="card">
+                        <button class="w-full text-left flex items-center justify-between py-2" onclick="toggleFAQ('faq-5')">
+                            <h3 class="text-lg font-semibold text-text-primary">What makes DeepSync different from other productivity apps?</h3>
+                            <svg id="faq-5-icon" class="h-5 w-5 text-text-secondary transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="faq-5-content" class="hidden mt-4 text-text-secondary">
+                            <p>DeepSync uniquely combines AI-powered task planning with digital wellness coaching and gamified focus sessions. Unlike traditional productivity apps, we focus on sustainable habit formation rather than just task management. Our profession-specific customization, community leaderboards, and comprehensive analytics provide a holistic approach to mindful productivity that addresses both professional effectiveness and personal well-being.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Modal -->
+        <div id="contact-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+            <div class="bg-surface rounded-xl shadow-modal max-w-md w-full p-6">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-xl font-bold text-text-primary">Contact Support</h3>
+                    <button onclick="closeContactModal()" class="text-text-secondary hover:text-text-primary">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <form id="contact-form" class="space-y-4">
+                    <div>
+                        <label for="contact-subject" class="block text-sm font-medium text-text-primary mb-2">Subject</label>
+                        <select id="contact-subject" class="input-field" required>
+                            <option value="">Select a topic</option>
+                            <option value="technical">Technical Issue</option>
+                            <option value="feature">Feature Request</option>
+                            <option value="billing">Billing Question</option>
+                            <option value="wellness">Wellness Coaching</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="contact-message" class="block text-sm font-medium text-text-primary mb-2">Message</label>
+                        <textarea id="contact-message" rows="4" class="input-field" placeholder="Describe your question or issue in detail..." required></textarea>
+                    </div>
+
+                    <div>
+                        <label for="contact-priority" class="block text-sm font-medium text-text-primary mb-2">Priority</label>
+                        <select id="contact-priority" class="input-field">
+                            <option value="low">Low - General question</option>
+                            <option value="medium" selected>Medium - Need help soon</option>
+                            <option value="high">High - Blocking my work</option>
+                            <option value="urgent">Urgent - Critical issue</option>
+                        </select>
+                    </div>
+
+                    <div class="flex space-x-3 pt-4">
+                        <button type="button" onclick="closeContactModal()" class="flex-1 btn-outline">Cancel</button>
+                        <button type="submit" class="flex-1 btn-primary">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-border-light py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 32 32" fill="currentColor">
+                            <circle cx="16" cy="8" r="3" opacity="0.8"/>
+                            <circle cx="16" cy="16" r="4" opacity="0.9"/>
+                            <circle cx="16" cy="24" r="3" opacity="0.7"/>
+                            <path d="M13 16h6M16 13v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <div>
+                            <h3 class="text-lg font-bold text-primary">DeepSync</h3>
+                            <p class="text-xs text-text-secondary">Mindful Productivity</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4 max-w-md">
+                        Sync your technology with your true priorities. Join thousands of professionals building sustainable digital wellness habits.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-colors">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-colors">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-sm font-semibold text-text-primary mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="ai_task_planner.html" class="text-text-secondary hover:text-primary transition-colors">AI Task Planner</a></li>
+                        <li><a href="leaderboard.html" class="text-text-secondary hover:text-primary transition-colors">Leaderboard</a></li>
+                        <li><a href="profile.html" class="text-text-secondary hover:text-primary transition-colors">Profile Settings</a></li>
+                        <li><a href="support.html" class="text-text-secondary hover:text-primary transition-colors">Support Center</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="text-sm font-semibold text-text-primary mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-colors">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-colors">Terms of Service</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-border-light mt-8 pt-8 text-center text-sm text-text-secondary">
+                <p>&copy; 2025 DeepSync. All rights reserved. | Made with ❤️ for mindful productivity</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Search functionality
+        function performSearch(query) {
+            const suggestions = document.getElementById('search-suggestions');
+            if (query.length > 2) {
+                suggestions.classList.remove('hidden');
+            } else {
+                suggestions.classList.add('hidden');
+            }
+        }
+
+        function searchFor(term) {
+            document.getElementById('support-search').value = term;
+            document.getElementById('search-suggestions').classList.add('hidden');
+            // In a real app, this would trigger actual search results
+            alert(`Searching for: ${term}`);
+        }
+
+        // Category expansion
+        function expandCategory(category) {
+            // In a real app, this would navigate to detailed category page
+            alert(`Opening ${category} help articles...`);
+        }
+
+        // FAQ toggle
+        function toggleFAQ(faqId) {
+            const content = document.getElementById(faqId + '-content');
+            const icon = document.getElementById(faqId + '-icon');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Contact methods
+        function startLiveChat() {
+            alert('Starting live chat session...\n\nConnecting you with Sarah from our support team.');
+        }
+
+        function openEmailForm() {
+            document.getElementById('contact-modal').classList.remove('hidden');
+        }
+
+        function closeContactModal() {
+            document.getElementById('contact-modal').classList.add('hidden');
+        }
+
+        function visitForum() {
+            alert('Redirecting to DeepSync Community Forum...\n\nConnect with 2,847+ active members sharing tips and experiences.');
+        }
+
+        function watchTutorials() {
+            alert('Opening video tutorial library...\n\n45+ step-by-step guides available covering all features.');
+        }
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const subject = document.getElementById('contact-subject').value;
+            const message = document.getElementById('contact-message').value;
+            const priority = document.getElementById('contact-priority').value;
+            
+            if (!subject || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Mock submission
+            alert(`Support ticket submitted successfully!\n\nTicket ID: DS-${Date.now()}\nPriority: ${priority}\nExpected response: Within 2 hours\n\nWe'll email you at alex.chen@techcorp.com when we respond.`);
+            closeContactModal();
+            
+            // Reset form
+            document.getElementById('contact-form').reset();
+        });
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Focus search input for better UX
+            document.getElementById('support-search').focus();
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
