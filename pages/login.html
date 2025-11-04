@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - DeepSync | Mindful Productivity Platform</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <meta name="description" content="Join DeepSync - the premium digital wellness platform for conscious professionals. Streamlined authentication with profession-specific customization.">
+  
+  <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdeepsync6941back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.9"></script>
+  <script type="module" src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  </head>
+<body class="bg-background min-h-screen">
+    <!-- Navigation Header -->
+    <nav class="bg-surface border-b border-border-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg class="h-8 w-8 text-primary" viewBox="0 0 32 32" fill="currentColor">
+                            <circle cx="16" cy="8" r="3" opacity="0.8"/>
+                            <circle cx="16" cy="16" r="4" opacity="0.9"/>
+                            <circle cx="16" cy="24" r="3" opacity="0.7"/>
+                            <path d="M13 16h6M16 13v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-primary">DeepSync</h1>
+                        <p class="text-xs text-text-secondary">Mindful Productivity</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="ai_task_planner.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">AI Planner</a>
+                        <a href="leaderboard.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Leaderboard</a>
+                        <a href="profile.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Profile</a>
+                        <a href="support.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Support</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary p-2" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-surface border-t border-border-light">
+                <a href="ai_task_planner.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">AI Planner</a>
+                <a href="leaderboard.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Leaderboard</a>
+                <a href="profile.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Profile</a>
+                <a href="support.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Support</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+        <!-- Hero Section with Background -->
+        <div class="relative min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 bg-gradient-to-br from-primary-50 to-secondary-50 opacity-50"></div>
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%231E3A8A" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+
+            <div class="relative max-w-md w-full space-y-8">
+                <!-- Header -->
+                <div class="text-center">
+                    <div class="mx-auto h-16 w-16 bg-primary rounded-full flex items-center justify-center mb-6">
+                        <svg class="h-8 w-8 text-white" viewBox="0 0 32 32" fill="currentColor">
+                            <circle cx="16" cy="8" r="3" opacity="0.8"/>
+                            <circle cx="16" cy="16" r="4" opacity="0.9"/>
+                            <circle cx="16" cy="24" r="3" opacity="0.7"/>
+                            <path d="M13 16h6M16 13v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-text-primary mb-2">Welcome to DeepSync</h2>
+                    <p class="text-text-secondary">Sync your technology with your true priorities</p>
+                    
+                    <!-- Social Proof -->
+                    <div class="mt-6 flex items-center justify-center space-x-6 text-sm text-text-secondary">
+                        <div class="flex items-center">
+                            <div class="flex -space-x-2 mr-2">
+                                <img class="h-6 w-6 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1581423880588-71beec9ca3f2" alt="User avatar" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                                <img class="h-6 w-6 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1581423880588-71beec9ca3f2" alt="User avatar" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                                <img class="h-6 w-6 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1659885785600-332531595893" alt="User avatar" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                            </div>
+                            <span>12,847+ professionals</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="h-4 w-4 text-success mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>2,341 joined this week</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Auth Form Container -->
+                <div class="bg-surface rounded-xl shadow-card p-8 border border-border-light">
+                    <!-- Tab Navigation -->
+                    <div class="flex mb-6 bg-background rounded-lg p-1">
+                        <button id="login-tab" class="flex-1 py-2 px-4 text-sm font-medium rounded-md transition-all duration-300 bg-primary text-white" onclick="switchTab('login')">
+                            Sign In
+                        </button>
+                        <button id="signup-tab" class="flex-1 py-2 px-4 text-sm font-medium rounded-md transition-all duration-300 text-text-secondary hover:text-primary" onclick="switchTab('signup')">
+                            Create Account
+                        </button>
+                    </div>
+
+                    <!-- Login Form -->
+                    <form id="login-form" class="space-y-6">
+                        <div>
+                            <label for="login-email" class="block text-sm font-medium text-text-primary mb-2">Email Address</label>
+                            <input id="login-email" name="email" type="email" required class="input-field" placeholder="alex.chen@techcorp.com" value="alex.chen@techcorp.com">
+                            <div id="login-email-error" class="hidden mt-1 text-sm text-error"></div>
+                        </div>
+
+                        <div>
+                            <label for="login-password" class="block text-sm font-medium text-text-primary mb-2">Password</label>
+                            <div class="relative">
+                                <input id="login-password" name="password" type="password" required class="input-field pr-10" placeholder="Enter your password" value="SecurePass123">
+                                <button type="button" class="absolute inset-y-0 right-0 pr-3 flex items-center" onclick="togglePassword('login-password')">
+                                    <svg id="login-password-show" class="h-5 w-5 text-text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    <svg id="login-password-hide" class="h-5 w-5 text-text-secondary hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div id="login-password-error" class="hidden mt-1 text-sm text-error"></div>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 text-primary focus:ring-secondary border-border rounded">
+                                <label for="remember-me" class="ml-2 block text-sm text-text-secondary">Remember me</label>
+                            </div>
+                            <div class="text-sm">
+                                <a href="javascript:void(0)" class="font-medium text-primary hover:text-primary-700 transition-colors">Forgot password?</a>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full btn-primary">
+                            <svg class="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/>
+                            </svg>
+                            Sign In to DeepSync
+                        </button>
+
+                        <!-- Continue as Guest -->
+                        <div class="text-center">
+                            <button type="button" class="text-sm text-text-secondary hover:text-primary transition-colors" onclick="continueAsGuest()">
+                                Continue as Guest to explore features
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Signup Form -->
+                    <form id="signup-form" class="space-y-6 hidden">
+                        <div>
+                            <label for="signup-email" class="block text-sm font-medium text-text-primary mb-2">Email Address</label>
+                            <input id="signup-email" name="email" type="email" required class="input-field" placeholder="sarah.martinez@university.edu" value="sarah.martinez@university.edu">
+                            <div id="signup-email-error" class="hidden mt-1 text-sm text-error"></div>
+                        </div>
+
+                        <div>
+                            <label for="signup-password" class="block text-sm font-medium text-text-primary mb-2">Password</label>
+                            <div class="relative">
+                                <input id="signup-password" name="password" type="password" required class="input-field pr-10" placeholder="Create a strong password" value="StudyFocus2024" oninput="checkPasswordStrength(this.value)">
+                                <button type="button" class="absolute inset-y-0 right-0 pr-3 flex items-center" onclick="togglePassword('signup-password')">
+                                    <svg id="signup-password-show" class="h-5 w-5 text-text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    <svg id="signup-password-hide" class="h-5 w-5 text-text-secondary hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <!-- Password Strength Indicator -->
+                            <div id="password-strength" class="mt-2">
+                                <div class="flex space-x-1">
+                                    <div id="strength-1" class="h-1 w-1/4 bg-border rounded"></div>
+                                    <div id="strength-2" class="h-1 w-1/4 bg-border rounded"></div>
+                                    <div id="strength-3" class="h-1 w-1/4 bg-border rounded"></div>
+                                    <div id="strength-4" class="h-1 w-1/4 bg-border rounded"></div>
+                                </div>
+                                <p id="strength-text" class="text-xs text-text-secondary mt-1">Password strength: Strong</p>
+                            </div>
+                            <div id="signup-password-error" class="hidden mt-1 text-sm text-error"></div>
+                        </div>
+
+                        <!-- Profession Selection -->
+                        <div>
+                            <label for="profession" class="block text-sm font-medium text-text-primary mb-2">Your Profession</label>
+                            <select id="profession" name="profession" required class="input-field">
+                                <option value="">Select your profession</option>
+                                <option value="developer">Software Developer</option>
+                                <option value="designer">UI/UX Designer</option>
+                                <option value="student" selected>Student</option>
+                                <option value="manager">Project Manager</option>
+                                <option value="consultant">Consultant</option>
+                                <option value="researcher">Researcher</option>
+                                <option value="entrepreneur">Entrepreneur</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div id="profession-error" class="hidden mt-1 text-sm text-error"></div>
+                        </div>
+
+                        <!-- Initial Habit Assessment -->
+                        <div class="bg-background rounded-lg p-4 border border-border-light">
+                            <h4 class="text-sm font-medium text-text-primary mb-3">Quick Habit Assessment</h4>
+                            <div class="space-y-3">
+                                <div>
+                                    <label class="block text-sm text-text-secondary mb-1">Daily screen time goal</label>
+                                    <select name="screen-time-goal" class="w-full text-sm border border-border rounded px-3 py-2 bg-surface">
+                                        <option value="4">Less than 4 hours</option>
+                                        <option value="6" selected>4-6 hours</option>
+                                        <option value="8">6-8 hours</option>
+                                        <option value="10">8+ hours</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm text-text-secondary mb-1">Primary productivity challenge</label>
+                                    <select name="productivity-challenge" class="w-full text-sm border border-border rounded px-3 py-2 bg-surface">
+                                        <option value="distractions" selected>Social media distractions</option>
+                                        <option value="focus">Maintaining focus</option>
+                                        <option value="planning">Task planning</option>
+                                        <option value="motivation">Staying motivated</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <input id="terms" name="terms" type="checkbox" required class="h-4 w-4 text-primary focus:ring-secondary border-border rounded">
+                            <label for="terms" class="ml-2 block text-sm text-text-secondary">
+                                I agree to the <a href="javascript:void(0)" class="text-primary hover:text-primary-700">Terms of Service</a> and <a href="javascript:void(0)" class="text-primary hover:text-primary-700">Privacy Policy</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="w-full btn-primary">
+                            <svg class="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
+                            </svg>
+                            Create Your DeepSync Account
+                        </button>
+                    </form>
+
+                    <!-- Divider -->
+                    <div class="mt-6">
+                        <div class="relative">
+                            <div class="absolute inset-0 flex items-center">
+                                <div class="w-full border-t border-border"></div>
+                            </div>
+                            <div class="relative flex justify-center text-sm">
+                                <span class="px-2 bg-surface text-text-secondary">Or continue with</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Login -->
+                    <div class="mt-6 grid grid-cols-2 gap-3">
+                        <button type="button" class="w-full inline-flex justify-center py-2 px-4 border border-border rounded-md shadow-sm bg-surface text-sm font-medium text-text-secondary hover:bg-background transition-colors">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                            </svg>
+                            <span class="ml-2">Google</span>
+                        </button>
+
+                        <button type="button" class="w-full inline-flex justify-center py-2 px-4 border border-border rounded-md shadow-sm bg-surface text-sm font-medium text-text-secondary hover:bg-background transition-colors">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.097.118.112.221.083.343-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
+                            </svg>
+                            <span class="ml-2">LinkedIn</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Trust Indicators -->
+                <div class="text-center mt-8">
+                    <div class="flex items-center justify-center space-x-6 text-xs text-text-secondary">
+                        <div class="flex items-center">
+                            <svg class="h-4 w-4 text-success mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>SSL Secured</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="h-4 w-4 text-success mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Privacy Protected</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="h-4 w-4 text-success mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>GDPR Compliant</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-border-light py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-sm text-text-secondary">
+                <p>&copy; 2025 DeepSync. All rights reserved. | <a href="javascript:void(0)" class="text-primary hover:text-primary-700">Privacy Policy</a> | <a href="javascript:void(0)" class="text-primary hover:text-primary-700">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching functionality
+        function switchTab(tab) {
+            const loginTab = document.getElementById('login-tab');
+            const signupTab = document.getElementById('signup-tab');
+            const loginForm = document.getElementById('login-form');
+            const signupForm = document.getElementById('signup-form');
+
+            if (tab === 'login') {
+                loginTab.className = 'flex-1 py-2 px-4 text-sm font-medium rounded-md transition-all duration-300 bg-primary text-white';
+                signupTab.className = 'flex-1 py-2 px-4 text-sm font-medium rounded-md transition-all duration-300 text-text-secondary hover:text-primary';
+                loginForm.classList.remove('hidden');
+                signupForm.classList.add('hidden');
+            } else {
+                signupTab.className = 'flex-1 py-2 px-4 text-sm font-medium rounded-md transition-all duration-300 bg-primary text-white';
+                loginTab.className = 'flex-1 py-2 px-4 text-sm font-medium rounded-md transition-all duration-300 text-text-secondary hover:text-primary';
+                signupForm.classList.remove('hidden');
+                loginForm.classList.add('hidden');
+            }
+        }
+
+        // Password visibility toggle
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            const showIcon = document.getElementById(inputId + '-show');
+            const hideIcon = document.getElementById(inputId + '-hide');
+
+            if (input.type === 'password') {
+                input.type = 'text';
+                showIcon.classList.add('hidden');
+                hideIcon.classList.remove('hidden');
+            } else {
+                input.type = 'password';
+                showIcon.classList.remove('hidden');
+                hideIcon.classList.add('hidden');
+            }
+        }
+
+        // Password strength checker
+        function checkPasswordStrength(password) {
+            const strengthBars = ['strength-1', 'strength-2', 'strength-3', 'strength-4'];
+            const strengthText = document.getElementById('strength-text');
+            
+            // Reset all bars
+            strengthBars.forEach(bar => {
+                document.getElementById(bar).className = 'h-1 w-1/4 bg-border rounded';
+            });
+
+            let strength = 0;
+            let strengthLabel = 'Weak';
+
+            if (password.length >= 8) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+
+            const colors = ['bg-error', 'bg-warning', 'bg-accent', 'bg-success'];
+            const labels = ['Weak', 'Fair', 'Good', 'Strong'];
+
+            for (let i = 0; i < strength; i++) {
+                document.getElementById(strengthBars[i]).className = `h-1 w-1/4 ${colors[strength - 1]} rounded`;
+            }
+
+            strengthText.textContent = `Password strength: ${labels[strength - 1] || 'Weak'}`;
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Continue as guest
+        function continueAsGuest() {
+            alert('Exploring as guest - redirecting to demo dashboard...');
+            // In a real app, this would redirect to a limited demo version
+            window.location.href = 'ai_task_planner.html';
+        }
+
+        // Form validation and submission
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            
+            // Simple validation
+            if (!email || !password) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            // Mock authentication
+            if (email === 'alex.chen@techcorp.com' && password === 'SecurePass123') {
+                alert('Login successful! Redirecting to dashboard...');
+                window.location.href = 'ai_task_planner.html';
+            } else {
+                alert('Invalid credentials. Try: alex.chen@techcorp.com / SecurePass123');
+            }
+        });
+
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+            const profession = document.getElementById('profession').value;
+            const terms = document.getElementById('terms').checked;
+            
+            // Validation
+            if (!email || !password || !profession || !terms) {
+                alert('Please fill in all required fields and accept the terms');
+                return;
+            }
+
+            // Mock registration
+            alert('Account created successfully! Welcome to DeepSync!');
+            window.location.href = 'ai_task_planner.html';
+        });
+
+        // Initialize password strength for pre-filled password
+        document.addEventListener('DOMContentLoaded', function() {
+            const signupPassword = document.getElementById('signup-password');
+            if (signupPassword.value) {
+                checkPasswordStrength(signupPassword.value);
+            }
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
