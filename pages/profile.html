@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings - DeepSync | Mindful Productivity Platform</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <meta name="description" content="Customize your DeepSync experience with profession-specific settings, notification preferences, and goal management for optimal digital wellness.">
+  
+  <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdeepsync6941back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.9"></script>
+  <script type="module" src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  </head>
+<body class="bg-background min-h-screen">
+    <!-- Navigation Header -->
+    <nav class="bg-surface border-b border-border-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg class="h-8 w-8 text-primary" viewBox="0 0 32 32" fill="currentColor">
+                            <circle cx="16" cy="8" r="3" opacity="0.8"/>
+                            <circle cx="16" cy="16" r="4" opacity="0.9"/>
+                            <circle cx="16" cy="24" r="3" opacity="0.7"/>
+                            <path d="M13 16h6M16 13v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-primary">DeepSync</h1>
+                        <p class="text-xs text-text-secondary">Mindful Productivity</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="ai_task_planner.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">AI Planner</a>
+                        <a href="leaderboard.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Leaderboard</a>
+                        <a href="profile.html" class="text-primary bg-primary-50 px-3 py-2 rounded-md text-sm font-medium">Profile</a>
+                        <a href="support.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Support</a>
+                    </div>
+                </div>
+
+                <!-- User Menu -->
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:flex items-center space-x-3">
+                        <img class="h-8 w-8 rounded-full border-2 border-primary-200" src="https://images.unsplash.com/photo-1688681637879-6426353ca4b5" alt="User profile avatar" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="text-sm">
+                            <p class="font-medium text-text-primary">Sarah Martinez</p>
+                            <p class="text-text-secondary">Student</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden">
+                        <button type="button" class="text-text-secondary hover:text-primary p-2" onclick="toggleMobileMenu()">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-surface border-t border-border-light">
+                <a href="ai_task_planner.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">AI Planner</a>
+                <a href="leaderboard.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Leaderboard</a>
+                <a href="profile.html" class="text-primary bg-primary-50 block px-3 py-2 rounded-md text-base font-medium">Profile</a>
+                <a href="support.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Support</a>
+                <div class="border-t border-border-light pt-3 mt-3">
+                    <div class="flex items-center px-3 py-2">
+                        <img class="h-8 w-8 rounded-full border-2 border-primary-200" src="https://images.unsplash.com/photo-1688681637879-6426353ca4b5" alt="User profile avatar" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="ml-3">
+                            <p class="font-medium text-text-primary">Sarah Martinez</p>
+                            <p class="text-sm text-text-secondary">Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Header Section -->
+        <div class="mb-8">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-3xl font-bold text-text-primary mb-2">Profile Settings</h1>
+                    <p class="text-text-secondary">Customize your DeepSync experience for optimal productivity and wellness</p>
+                </div>
+                <div class="hidden md:flex items-center space-x-3">
+                    <div class="text-right">
+                        <p class="text-sm text-text-secondary">Last updated</p>
+                        <p class="text-sm font-medium text-text-primary">Nov 4, 2025</p>
+                    </div>
+                    <div class="h-12 w-12 bg-success-100 rounded-full flex items-center justify-center">
+                        <svg class="h-6 w-6 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar Navigation -->
+            <div class="lg:col-span-1">
+                <div class="bg-surface rounded-xl shadow-card border border-border-light p-6 sticky top-8">
+                    <nav class="space-y-2">
+                        <button onclick="showSection('personal')" id="nav-personal" class="w-full text-left px-4 py-3 rounded-lg bg-primary text-white font-medium transition-colors">
+                            <div class="flex items-center">
+                                <svg class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                </svg>
+                                Personal Info
+                            </div>
+                        </button>
+                        <button onclick="showSection('profession')" id="nav-profession" class="w-full text-left px-4 py-3 rounded-lg text-text-secondary hover:bg-background hover:text-primary font-medium transition-colors">
+                            <div class="flex items-center">
+                                <svg class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6z"/>
+                                </svg>
+                                Profession
+                            </div>
+                        </button>
+                        <button onclick="showSection('notifications')" id="nav-notifications" class="w-full text-left px-4 py-3 rounded-lg text-text-secondary hover:bg-background hover:text-primary font-medium transition-colors">
+                            <div class="flex items-center">
+                                <svg class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5v-5zM4.868 19.718A8.966 8.966 0 003 12a9 9 0 0118 0 8.966 8.966 0 00-1.868 7.718"/>
+                                </svg>
+                                Notifications
+                            </div>
+                        </button>
+                        <button onclick="showSection('goals')" id="nav-goals" class="w-full text-left px-4 py-3 rounded-lg text-text-secondary hover:bg-background hover:text-primary font-medium transition-colors">
+                            <div class="flex items-center">
+                                <svg class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                                Goals & Targets
+                            </div>
+                        </button>
+                        <button onclick="showSection('privacy')" id="nav-privacy" class="w-full text-left px-4 py-3 rounded-lg text-text-secondary hover:bg-background hover:text-primary font-medium transition-colors">
+                            <div class="flex items-center">
+                                <svg class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                                </svg>
+                                Privacy & Data
+                            </div>
+                        </button>
+                        <button onclick="showSection('integrations')" id="nav-integrations" class="w-full text-left px-4 py-3 rounded-lg text-text-secondary hover:bg-background hover:text-primary font-medium transition-colors">
+                            <div class="flex items-center">
+                                <svg class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+                                </svg>
+                                Integrations
+                            </div>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="lg:col-span-3">
+                <!-- Personal Information Section -->
+                <div id="section-personal" class="section-content">
+                    <div class="bg-surface rounded-xl shadow-card border border-border-light p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="text-2xl font-bold text-text-primary">Personal Information</h2>
+                            <div class="flex items-center space-x-2">
+                                <div class="h-2 w-2 bg-success rounded-full"></div>
+                                <span class="text-sm text-success font-medium">Profile Complete</span>
+                            </div>
+                        </div>
+
+                        <!-- Profile Photo Section -->
+                        <div class="mb-8">
+                            <div class="flex items-center space-x-6">
+                                <div class="relative">
+                                    <img class="h-24 w-24 rounded-full border-4 border-primary-200 object-cover" src="https://images.unsplash.com/photo-1603122855585-d6c6c90ce382" alt="Profile photo of Sarah Martinez" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                                    <button class="absolute bottom-0 right-0 bg-primary text-white p-2 rounded-full shadow-card hover:bg-primary-700 transition-colors">
+                                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-text-primary">Profile Photo</h3>
+                                    <p class="text-text-secondary text-sm mb-3">Upload a professional photo to personalize your profile</p>
+                                    <div class="flex space-x-3">
+                                        <button class="btn-outline text-sm px-4 py-2">Change Photo</button>
+                                        <button class="text-sm text-error hover:text-error-700 px-4 py-2">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Personal Details Form -->
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="first-name" class="block text-sm font-medium text-text-primary mb-2">First Name</label>
+                                    <input type="text" id="first-name" name="first-name" value="Sarah" class="input-field">
+                                </div>
+                                <div>
+                                    <label for="last-name" class="block text-sm font-medium text-text-primary mb-2">Last Name</label>
+                                    <input type="text" id="last-name" name="last-name" value="Martinez" class="input-field">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-text-primary mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" value="sarah.martinez@university.edu" class="input-field">
+                                <p class="text-sm text-text-secondary mt-1">This email is used for login and important notifications</p>
+                            </div>
+
+                            <div>
+                                <label for="timezone" class="block text-sm font-medium text-text-primary mb-2">Timezone</label>
+                                <select id="timezone" name="timezone" class="input-field">
+                                    <option value="America/New_York">Eastern Time (ET)</option>
+                                    <option value="America/Chicago">Central Time (CT)</option>
+                                    <option value="America/Denver">Mountain Time (MT)</option>
+                                    <option value="America/Los_Angeles" selected>Pacific Time (PT)</option>
+                                    <option value="Europe/London">Greenwich Mean Time (GMT)</option>
+                                    <option value="Europe/Paris">Central European Time (CET)</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="bio" class="block text-sm font-medium text-text-primary mb-2">Bio</label>
+                                <textarea id="bio" name="bio" rows="4" class="input-field" placeholder="Tell us about yourself and your productivity goals...">Psychology student passionate about digital wellness and mindful technology use. Currently researching the impact of social media on academic performance.</textarea>
+                            </div>
+
+                            <div class="flex justify-end">
+                                <button type="submit" class="btn-primary">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Profession Settings Section -->
+                <div id="section-profession" class="section-content hidden">
+                    <div class="bg-surface rounded-xl shadow-card border border-border-light p-8">
+                        <h2 class="text-2xl font-bold text-text-primary mb-6">Profession Settings</h2>
+                        
+                        <!-- Current Profession Display -->
+                        <div class="bg-primary-50 rounded-lg p-6 mb-8">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4">
+                                    <div class="h-12 w-12 bg-primary rounded-lg flex items-center justify-center">
+                                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-primary">Student</h3>
+                                        <p class="text-text-secondary">University/Graduate Student</p>
+                                    </div>
+                                </div>
+                                <button class="btn-outline text-sm px-4 py-2" onclick="showProfessionSelector()">Change</button>
+                            </div>
+                        </div>
+
+                        <!-- Profession Selector (Hidden by default) -->
+                        <div id="profession-selector" class="hidden mb-8">
+                            <h3 class="text-lg font-semibold text-text-primary mb-4">Select Your Profession</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="profession-option border-2 border-border rounded-lg p-4 cursor-pointer hover:border-primary transition-colors" data-profession="student">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="h-10 w-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                                            <svg class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Student</h4>
+                                            <p class="text-sm text-text-secondary">University/Graduate Student</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="profession-option border-2 border-border rounded-lg p-4 cursor-pointer hover:border-primary transition-colors" data-profession="developer">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="h-10 w-10 bg-secondary-100 rounded-lg flex items-center justify-center">
+                                            <svg class="h-5 w-5 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Software Developer</h4>
+                                            <p class="text-sm text-text-secondary">Programming & Development</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="profession-option border-2 border-border rounded-lg p-4 cursor-pointer hover:border-primary transition-colors" data-profession="designer">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="h-10 w-10 bg-accent-100 rounded-lg flex items-center justify-center">
+                                            <svg class="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">UI/UX Designer</h4>
+                                            <p class="text-sm text-text-secondary">Design & User Experience</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="profession-option border-2 border-border rounded-lg p-4 cursor-pointer hover:border-primary transition-colors" data-profession="manager">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="h-10 w-10 bg-success-100 rounded-lg flex items-center justify-center">
+                                            <svg class="h-5 w-5 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Project Manager</h4>
+                                            <p class="text-sm text-text-secondary">Team & Project Leadership</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex justify-end space-x-3 mt-6">
+                                <button class="btn-outline" onclick="hideProfessionSelector()">Cancel</button>
+                                <button class="btn-primary" onclick="saveProfession()">Save Profession</button>
+                            </div>
+                        </div>
+
+                        <!-- Profession-Specific Settings -->
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-primary mb-4">Study Focus Areas</h3>
+                                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" checked class="h-4 w-4 text-primary focus:ring-secondary border-border rounded">
+                                        <span class="text-sm text-text-secondary">Psychology</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" class="h-4 w-4 text-primary focus:ring-secondary border-border rounded">
+                                        <span class="text-sm text-text-secondary">Research Methods</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" checked class="h-4 w-4 text-primary focus:ring-secondary border-border rounded">
+                                        <span class="text-sm text-text-secondary">Statistics</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" class="h-4 w-4 text-primary focus:ring-secondary border-border rounded">
+                                        <span class="text-sm text-text-secondary">Writing</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" class="h-4 w-4 text-primary focus:ring-secondary border-border rounded">
+                                        <span class="text-sm text-text-secondary">Presentations</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" class="h-4 w-4 text-primary focus:ring-secondary border-border rounded">
+                                        <span class="text-sm text-text-secondary">Group Projects</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="academic-level" class="block text-sm font-medium text-text-primary mb-2">Academic Level</label>
+                                <select id="academic-level" name="academic-level" class="input-field">
+                                    <option value="undergraduate">Undergraduate</option>
+                                    <option value="graduate" selected>Graduate</option>
+                                    <option value="phd">PhD/Doctoral</option>
+                                    <option value="postdoc">Post-Doctoral</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="study-schedule" class="block text-sm font-medium text-text-primary mb-2">Preferred Study Schedule</label>
+                                <select id="study-schedule" name="study-schedule" class="input-field">
+                                    <option value="morning">Morning (6AM - 12PM)</option>
+                                    <option value="afternoon" selected>Afternoon (12PM - 6PM)</option>
+                                    <option value="evening">Evening (6PM - 12AM)</option>
+                                    <option value="night">Night (12AM - 6AM)</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notifications Section -->
+                <div id="section-notifications" class="section-content hidden">
+                    <div class="bg-surface rounded-xl shadow-card border border-border-light p-8">
+                        <h2 class="text-2xl font-bold text-text-primary mb-6">Notification Preferences</h2>
+                        
+                        <!-- Notification Categories -->
+                        <div class="space-y-8">
+                            <!-- Focus & Productivity -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-primary mb-4">Focus & Productivity</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Focus Session Reminders</h4>
+                                            <p class="text-sm text-text-secondary">Get notified when it's time for your scheduled focus sessions</p>
+                                        </div>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" checked class="sr-only peer">
+                                            <div class="w-11 h-6 bg-border peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                        </label>
+                                    </div>
+
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Break Reminders</h4>
+                                            <p class="text-sm text-text-secondary">Gentle reminders to take breaks during long work sessions</p>
+                                        </div>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" checked class="sr-only peer">
+                                            <div class="w-11 h-6 bg-border peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                        </label>
+                                    </div>
+
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">AI Task Suggestions</h4>
+                                            <p class="text-sm text-text-secondary">Receive intelligent task recommendations based on your patterns</p>
+                                        </div>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" checked class="sr-only peer">
+                                            <div class="w-11 h-6 bg-border peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Digital Wellness -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-primary mb-4">Digital Wellness</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Screen Time Alerts</h4>
+                                            <p class="text-sm text-text-secondary">Notifications when you exceed your daily screen time goals</p>
+                                        </div>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" checked class="sr-only peer">
+                                            <div class="w-11 h-6 bg-border peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                        </label>
+                                    </div>
+
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Detox Reminders</h4>
+                                            <p class="text-sm text-text-secondary">Gentle nudges to take digital detox breaks</p>
+                                        </div>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" class="sr-only peer">
+                                            <div class="w-11 h-6 bg-border peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                        </label>
+                                    </div>
+
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Weekly Wellness Report</h4>
+                                            <p class="text-sm text-text-secondary">Summary of your digital wellness progress and insights</p>
+                                        </div>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" checked class="sr-only peer">
+                                            <div class="w-11 h-6 bg-border peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Community & Achievements -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-primary mb-4">Community & Achievements</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Achievement Celebrations</h4>
+                                            <p class="text-sm text-text-secondary">Get notified when you reach milestones and earn badges</p>
+                                        </div>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" checked class="sr-only peer">
+                                            <div class="w-11 h-6 bg-border peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                        </label>
+                                    </div>
+
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Leaderboard Updates</h4>
+                                            <p class="text-sm text-text-secondary">Notifications about your ranking changes and challenges</p>
+                                        </div>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" class="sr-only peer">
+                                            <div class="w-11 h-6 bg-border peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                        </label>
+                                    </div>
+
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Community Tips</h4>
+                                            <p class="text-sm text-text-secondary">Helpful tips and insights shared by the DeepSync community</p>
+                                        </div>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" checked class="sr-only peer">
+                                            <div class="w-11 h-6 bg-border peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Notification Timing -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-primary mb-4">Notification Timing</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="quiet-hours-start" class="block text-sm font-medium text-text-primary mb-2">Quiet Hours Start</label>
+                                        <input type="time" id="quiet-hours-start" name="quiet-hours-start" value="22:00" class="input-field">
+                                    </div>
+                                    <div>
+                                        <label for="quiet-hours-end" class="block text-sm font-medium text-text-primary mb-2">Quiet Hours End</label>
+                                        <input type="time" id="quiet-hours-end" name="quiet-hours-end" value="08:00" class="input-field">
+                                    </div>
+                                </div>
+                                <p class="text-sm text-text-secondary mt-2">No notifications will be sent during quiet hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Goals & Targets Section -->
+                <div id="section-goals" class="section-content hidden">
+                    <div class="bg-surface rounded-xl shadow-card border border-border-light p-8">
+                        <h2 class="text-2xl font-bold text-text-primary mb-6">Goals & Targets</h2>
+                        
+                        <!-- Current Goals Overview -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-primary-50 rounded-lg p-6">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="font-semibold text-primary">Daily Focus Time</h3>
+                                    <div class="text-2xl font-bold text-primary">4.5h</div>
+                                </div>
+                                <div class="w-full bg-primary-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+                                </div>
+                                <p class="text-sm text-primary-700 mt-2">75% of 6 hour goal</p>
+                            </div>
+
+                            <div class="bg-success-50 rounded-lg p-6">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="font-semibold text-success">Screen Time Reduction</h3>
+                                    <div class="text-2xl font-bold text-success">-2.3h</div>
+                                </div>
+                                <div class="w-full bg-success-200 rounded-full h-2">
+                                    <div class="bg-success h-2 rounded-full" style="width: 92%"></div>
+                                </div>
+                                <p class="text-sm text-success-700 mt-2">92% of 2.5 hour reduction goal</p>
+                            </div>
+                        </div>
+
+                        <!-- Goal Settings -->
+                        <div class="space-y-8">
+                            <!-- Focus Goals -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-primary mb-4">Focus & Productivity Goals</h3>
+                                <div class="space-y-6">
+                                    <div>
+                                        <label for="daily-focus-goal" class="block text-sm font-medium text-text-primary mb-2">Daily Focus Time Goal</label>
+                                        <div class="flex items-center space-x-4">
+                                            <input type="range" id="daily-focus-goal" name="daily-focus-goal" min="1" max="12" value="6" class="flex-1 h-2 bg-border rounded-lg appearance-none cursor-pointer">
+                                            <span class="text-lg font-semibold text-primary w-16 text-center">6 hours</span>
+                                        </div>
+                                        <p class="text-sm text-text-secondary mt-1">Recommended for students: 4-8 hours per day</p>
+                                    </div>
+
+                                    <div>
+                                        <label for="focus-session-length" class="block text-sm font-medium text-text-primary mb-2">Preferred Focus Session Length</label>
+                                        <select id="focus-session-length" name="focus-session-length" class="input-field">
+                                            <option value="25">25 minutes (Pomodoro)</option>
+                                            <option value="45" selected>45 minutes</option>
+                                            <option value="60">1 hour</option>
+                                            <option value="90">90 minutes</option>
+                                            <option value="120">2 hours</option>
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <label for="weekly-study-goal" class="block text-sm font-medium text-text-primary mb-2">Weekly Study Sessions Goal</label>
+                                        <div class="flex items-center space-x-4">
+                                            <input type="range" id="weekly-study-goal" name="weekly-study-goal" min="5" max="35" value="20" class="flex-1 h-2 bg-border rounded-lg appearance-none cursor-pointer">
+                                            <span class="text-lg font-semibold text-primary w-20 text-center">20 sessions</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Digital Wellness Goals -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-primary mb-4">Digital Wellness Goals</h3>
+                                <div class="space-y-6">
+                                    <div>
+                                        <label for="screen-time-limit" class="block text-sm font-medium text-text-primary mb-2">Daily Screen Time Limit</label>
+                                        <div class="flex items-center space-x-4">
+                                            <input type="range" id="screen-time-limit" name="screen-time-limit" min="2" max="16" value="8" class="flex-1 h-2 bg-border rounded-lg appearance-none cursor-pointer">
+                                            <span class="text-lg font-semibold text-success w-16 text-center">8 hours</span>
+                                        </div>
+                                        <p class="text-sm text-text-secondary mt-1">Includes productive and recreational screen time</p>
+                                    </div>
+
+                                    <div>
+                                        <label for="social-media-limit" class="block text-sm font-medium text-text-primary mb-2">Social Media Time Limit</label>
+                                        <div class="flex items-center space-x-4">
+                                            <input type="range" id="social-media-limit" name="social-media-limit" min="15" max="180" value="60" class="flex-1 h-2 bg-border rounded-lg appearance-none cursor-pointer">
+                                            <span class="text-lg font-semibold text-warning w-20 text-center">60 minutes</span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label for="detox-frequency" class="block text-sm font-medium text-text-primary mb-2">Digital Detox Frequency</label>
+                                        <select id="detox-frequency" name="detox-frequency" class="input-field">
+                                            <option value="daily">Daily (30 minutes)</option>
+                                            <option value="weekly" selected>Weekly (2 hours)</option>
+                                            <option value="monthly">Monthly (1 day)</option>
+                                            <option value="custom">Custom schedule</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Academic Goals -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-primary mb-4">Academic Goals</h3>
+                                <div class="space-y-6">
+                                    <div>
+                                        <label for="gpa-target" class="block text-sm font-medium text-text-primary mb-2">Target GPA</label>
+                                        <input type="number" id="gpa-target" name="gpa-target" min="0" max="4" step="0.1" value="3.8" class="input-field">
+                                    </div>
+
+                                    <div>
+                                        <label for="study-streak-goal" class="block text-sm font-medium text-text-primary mb-2">Study Streak Goal</label>
+                                        <select id="study-streak-goal" name="study-streak-goal" class="input-field">
+                                            <option value="7">7 days</option>
+                                            <option value="14">14 days</option>
+                                            <option value="30" selected>30 days</option>
+                                            <option value="60">60 days</option>
+                                            <option value="100">100 days</option>
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <label for="research-goal" class="block text-sm font-medium text-text-primary mb-2">Monthly Research Hours</label>
+                                        <div class="flex items-center space-x-4">
+                                            <input type="range" id="research-goal" name="research-goal" min="10" max="100" value="40" class="flex-1 h-2 bg-border rounded-lg appearance-none cursor-pointer">
+                                            <span class="text-lg font-semibold text-accent w-16 text-center">40 hours</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end mt-8">
+                            <button type="submit" class="btn-primary">Save Goals</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Privacy & Data Section -->
+                <div id="section-privacy" class="section-content hidden">
+                    <div class="bg-surface rounded-xl shadow-card border border-border-light p-8">
+                        <h2 class="text-2xl font-bold text-text-primary mb-6">Privacy & Data Control</h2>
+                        
+                        <!-- Privacy Overview -->
+                        <div class="bg-success-50 rounded-lg p-6 mb-8">
+                            <div class="flex items-center space-x-3">
+                                <div class="h-10 w-10 bg-success rounded-full flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-success">Your Privacy is Protected</h3>
+                                    <p class="text-sm text-success-700">All data is encrypted and you have full control over your information</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Data Collection Settings -->
+                        <div class="space-y-8">
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-primary mb-4">Data Collection Preferences</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Usage Analytics</h4>
+                                            <p class="text-sm text-text-secondary">Help improve DeepSync by sharing anonymous usage data</p>
+                                        </div>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" checked class="sr-only peer">
+                                            <div class="w-11 h-6 bg-border peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                        </label>
+                                    </div>
+
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Performance Monitoring</h4>
+                                            <p class="text-sm text-text-secondary">Allow monitoring of app performance to identify and fix issues</p>
+                                        </div>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" checked class="sr-only peer">
+                                            <div class="w-11 h-6 bg-border peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                        </label>
+                                    </div>
+
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Personalization Data</h4>
+                                            <p class="text-sm text-text-secondary">Use your data to provide personalized recommendations and insights</p>
+                                        </div>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" checked class="sr-only peer">
+                                            <div class="w-11 h-6 bg-border peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Data Sharing -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-primary mb-4">Data Sharing</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Community Leaderboards</h4>
+                                            <p class="text-sm text-text-secondary">Share your progress anonymously in community rankings</p>
+                                        </div>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" checked class="sr-only peer">
+                                            <div class="w-11 h-6 bg-border peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                        </label>
+                                    </div>
+
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Research Participation</h4>
+                                            <p class="text-sm text-text-secondary">Contribute to digital wellness research (completely anonymous)</p>
+                                        </div>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" class="sr-only peer">
+                                            <div class="w-11 h-6 bg-border peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Data Management -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-text-primary mb-4">Data Management</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <button class="btn-outline flex items-center justify-center space-x-2">
+                                        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                        </svg>
+                                        <span>Export My Data</span>
+                                    </button>
+
+                                    <button class="btn-outline flex items-center justify-center space-x-2">
+                                        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                                        </svg>
+                                        <span>Backup Settings</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Account Deletion -->
+                            <div class="border-t border-border pt-8">
+                                <h3 class="text-lg font-semibold text-error mb-4">Account Deletion</h3>
+                                <div class="bg-error-50 rounded-lg p-6">
+                                    <div class="flex items-start space-x-3">
+                                        <svg class="h-6 w-6 text-error mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+                                        </svg>
+                                        <div class="flex-1">
+                                            <h4 class="font-medium text-error mb-2">Delete Account</h4>
+                                            <p class="text-sm text-error-700 mb-4">Permanently delete your account and all associated data. This action cannot be undone.</p>
+                                            <button class="bg-error text-white px-4 py-2 rounded-lg hover:bg-error-700 transition-colors text-sm font-medium">
+                                                Request Account Deletion
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Integrations Section -->
+                <div id="section-integrations" class="section-content hidden">
+                    <div class="bg-surface rounded-xl shadow-card border border-border-light p-8">
+                        <h2 class="text-2xl font-bold text-text-primary mb-6">Integrations & Sync</h2>
+                        
+                        <!-- Connected Apps -->
+                        <div class="mb-8">
+                            <h3 class="text-lg font-semibold text-text-primary mb-4">Connected Applications</h3>
+                            <div class="space-y-4">
+                                <!-- Google Calendar -->
+                                <div class="flex items-center justify-between p-4 border border-border rounded-lg">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                            <svg class="h-6 w-6 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Google Calendar</h4>
+                                            <p class="text-sm text-text-secondary">Sync focus sessions with your calendar</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <div class="flex items-center space-x-2">
+                                            <div class="h-2 w-2 bg-success rounded-full"></div>
+                                            <span class="text-sm text-success font-medium">Connected</span>
+                                        </div>
+                                        <button class="text-sm text-text-secondary hover:text-primary">Configure</button>
+                                    </div>
+                                </div>
+
+                                <!-- Notion -->
+                                <div class="flex items-center justify-between p-4 border border-border rounded-lg">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="h-12 w-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                                            <svg class="h-6 w-6 text-gray-800" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Notion</h4>
+                                            <p class="text-sm text-text-secondary">Import tasks and sync productivity data</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <button class="btn-outline text-sm px-4 py-2">Connect</button>
+                                    </div>
+                                </div>
+
+                                <!-- Spotify -->
+                                <div class="flex items-center justify-between p-4 border border-border rounded-lg">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                            <svg class="h-6 w-6 text-green-600" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Spotify</h4>
+                                            <p class="text-sm text-text-secondary">Play focus music during study sessions</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <div class="flex items-center space-x-2">
+                                            <div class="h-2 w-2 bg-success rounded-full"></div>
+                                            <span class="text-sm text-success font-medium">Connected</span>
+                                        </div>
+                                        <button class="text-sm text-text-secondary hover:text-primary">Configure</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sync Settings -->
+                        <div class="mb-8">
+                            <h3 class="text-lg font-semibold text-text-primary mb-4">Sync Settings</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h4 class="font-medium text-text-primary">Cross-Device Sync</h4>
+                                        <p class="text-sm text-text-secondary">Keep your data synchronized across all devices</p>
+                                    </div>
+                                    <label class="relative inline-flex items-center cursor-pointer">
+                                        <input type="checkbox" checked class="sr-only peer">
+                                        <div class="w-11 h-6 bg-border peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                    </label>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h4 class="font-medium text-text-primary">Auto Backup</h4>
+                                        <p class="text-sm text-text-secondary">Automatically backup your settings and data</p>
+                                    </div>
+                                    <label class="relative inline-flex items-center cursor-pointer">
+                                        <input type="checkbox" checked class="sr-only peer">
+                                        <div class="w-11 h-6 bg-border peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                    </label>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h4 class="font-medium text-text-primary">Offline Mode</h4>
+                                        <p class="text-sm text-text-secondary">Continue using core features without internet connection</p>
+                                    </div>
+                                    <label class="relative inline-flex items-center cursor-pointer">
+                                        <input type="checkbox" checked class="sr-only peer">
+                                        <div class="w-11 h-6 bg-border peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-border after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Available Integrations -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-text-primary mb-4">Available Integrations</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="border border-border rounded-lg p-4 hover:border-primary transition-colors cursor-pointer">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="h-10 w-10 bg-red-100 rounded-lg flex items-center justify-center">
+                                            <svg class="h-5 w-5 text-red-600" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Google Drive</h4>
+                                            <p class="text-sm text-text-secondary">Backup data to Google Drive</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="border border-border rounded-lg p-4 hover:border-primary transition-colors cursor-pointer">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="h-10 w-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                                            <svg class="h-5 w-5 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.097.118.112.221.083.343-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium text-text-primary">Slack</h4>
+                                            <p class="text-sm text-text-secondary">Share achievements with team</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-border-light py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-sm text-text-secondary">
+                <p>&copy; 2025 DeepSync. All rights reserved. | <a href="javascript:void(0)" class="text-primary hover:text-primary-700">Privacy Policy</a> | <a href="javascript:void(0)" class="text-primary hover:text-primary-700">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Section navigation
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section-content');
+            sections.forEach(section => section.classList.add('hidden'));
+            
+            // Show selected section
+            document.getElementById(`section-${sectionName}`).classList.remove('hidden');
+            
+            // Update navigation active state
+            const navButtons = document.querySelectorAll('[id^="nav-"]');
+            navButtons.forEach(button => {
+                button.className = 'w-full text-left px-4 py-3 rounded-lg text-text-secondary hover:bg-background hover:text-primary font-medium transition-colors';
+            });
+            
+            document.getElementById(`nav-${sectionName}`).className = 'w-full text-left px-4 py-3 rounded-lg bg-primary text-white font-medium transition-colors';
+        }
+
+        // Profession selector functions
+        function showProfessionSelector() {
+            document.getElementById('profession-selector').classList.remove('hidden');
+        }
+
+        function hideProfessionSelector() {
+            document.getElementById('profession-selector').classList.add('hidden');
+        }
+
+        function saveProfession() {
+            // In a real app, this would save the selected profession
+            alert('Profession updated successfully!');
+            hideProfessionSelector();
+        }
+
+        // Profession option selection
+        document.addEventListener('DOMContentLoaded', function() {
+            const professionOptions = document.querySelectorAll('.profession-option');
+            professionOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove selection from all options
+                    professionOptions.forEach(opt => {
+                        opt.classList.remove('border-primary', 'bg-primary-50');
+                        opt.classList.add('border-border');
+                    });
+                    
+                    // Add selection to clicked option
+                    this.classList.remove('border-border');
+                    this.classList.add('border-primary', 'bg-primary-50');
+                });
+            });
+
+            // Set initial selection for student
+            const studentOption = document.querySelector('[data-profession="student"]');
+            if (studentOption) {
+                studentOption.classList.remove('border-border');
+                studentOption.classList.add('border-primary', 'bg-primary-50');
+            }
+        });
+
+        // Range slider updates
+        document.addEventListener('DOMContentLoaded', function() {
+            const rangeInputs = document.querySelectorAll('input[type="range"]');
+            rangeInputs.forEach(input => {
+                const updateValue = () => {
+                    const value = input.value;
+                    const span = input.nextElementSibling;
+                    if (span) {
+                        if (input.id === 'daily-focus-goal') {
+                            span.textContent = `${value} hours`;
+                        } else if (input.id === 'weekly-study-goal') {
+                            span.textContent = `${value} sessions`;
+                        } else if (input.id === 'screen-time-limit') {
+                            span.textContent = `${value} hours`;
+                        } else if (input.id === 'social-media-limit') {
+                            span.textContent = `${value} minutes`;
+                        } else if (input.id === 'research-goal') {
+                            span.textContent = `${value} hours`;
+                        }
+                    }
+                };
+                
+                input.addEventListener('input', updateValue);
+                updateValue(); // Set initial value
+            });
+        });
+
+        // Form submissions
+        document.addEventListener('DOMContentLoaded', function() {
+            const forms = document.querySelectorAll('form');
+            forms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Settings saved successfully!');
+                });
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
